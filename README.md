@@ -42,7 +42,7 @@ Everything visible is driven by `data/`. You rarely need to touch components.
   - Use `notice` for anything a reader must not miss, e.g. "synthetic data" or "training simulation".
 - **Add a skill:** add it to a group in `data/skills.ts`. Put the project slugs that demonstrate it in `evidence`. There are no proficiency levels, by design.
 - **Add a certificate or course:** add an entry to `data/development.ts`. Titles are enough — credentials live on LinkedIn. `year` and `url` are optional.
-- **CV:** put the PDF in `public/cv/` and set `cvUrl` in `data/profile.ts` (e.g. `"/cv/Manar-Alosaimi-CV.pdf"`). The "Download CV" button appears only when this is set.
+- **CV:** the source is `../cv/Manar-Alosaimi-CV.html` (one-page, ATS-friendly). After editing it, export to PDF (open it in Edge/Chrome → Print → Save as PDF, margins "Default", no headers/footers) and copy the PDF to `public/cv/Manar-Alosaimi-CV.pdf`. The "CV" link in the hero and "Download CV" in Contact point to that file via `cvUrl` in `data/profile.ts`.
 - **Images:** put them in `public/img/` and reference them in a section's `figures` with their real `width`/`height`. Strip metadata before publishing.
 
 ## Motion and performance
@@ -65,7 +65,6 @@ Everything visible is driven by `data/`. You rarely need to touch components.
 | GPA: confirm 3.80 vs 3.82 against the transcript | `data/experience.ts` | The old site says 3.82; currently shown as 3.8 / 4.0 |
 | Logistics course year | `data/projects.ts` | Shown as "Prototype" |
 | Provider for "Digital Transformation and AI for Business" | `data/development.ts` | Unknown |
-| CV PDF | `public/cv/` + `data/profile.ts` | The button is hidden until provided |
 | Consulting PDFs (FitBox, Hospital, IC deck, financial model) | — | Not republished: confirm the Boost/Arpus material may be shared publicly |
 | Capstone poster/presentation PDFs | — | Not republished: the presentation shows student ID numbers and the poster names teammates; consider removing the IDs from the public GitHub repo too |
 | GRC dashboard screenshots | `public/img/` | Would strengthen the case study |

@@ -25,9 +25,6 @@ export const technicalGroups: SkillGroup[] = [
     short: "Dev",
     skills: [
       { name: "Python", evidence: ["ai-compliance-assessment", "masar-lakehouse", "logistics-multi-agent", "smart-hajj-earbud"] },
-      { name: "FastAPI", evidence: ["ai-compliance-assessment"] },
-      { name: "React", evidence: ["ai-compliance-assessment"] },
-      { name: "TypeScript", evidence: ["ai-compliance-assessment"] },
       { name: "API Integration", evidence: ["ai-compliance-assessment", "logistics-multi-agent"] },
       { name: "JSON Schema Design", evidence: ["ai-compliance-assessment"] },
     ],

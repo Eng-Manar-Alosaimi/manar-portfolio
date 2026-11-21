@@ -5,13 +5,14 @@ export const profile = {
     "I build intelligent systems and data-driven solutions, combining engineering foundations with analytical thinking to solve real-world problems.",
   location: "Riyadh, Saudi Arabia",
   email: "engmanaralosaimi@gmail.com",
+  phone: { display: "+966 53 898 8789", tel: "+966538988789" },
   linkedin: "https://www.linkedin.com/in/manar-alosaimixx/",
   github: "https://github.com/Eng-Manar-Alosaimi",
   /**
    * Path to the CV inside /public (e.g. "/cv/Manar-Alosaimi-CV.pdf").
    * The "Download CV" button only renders when this is set.
    */
-  cvUrl: null as string | null,
+  cvUrl: "/cv/Manar-Alosaimi-CV.pdf" as string | null,
 };
 
 export const siteMeta = {

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
-import { ArrowDownRight, Github, Linkedin, MapPin } from "lucide-react";
+import { ArrowDownRight, Download, Github, Linkedin, MapPin } from "lucide-react";
 import { useRef } from "react";
 import { profile } from "@/data/profile";
 import { HeroVisual } from "@/components/3d/HeroVisual";
@@ -63,6 +63,16 @@ export function Hero() {
             >
               Let&apos;s connect
             </a>
+            {profile.cvUrl && (
+              <a
+                href={profile.cvUrl}
+                download
+                className="inline-flex items-center gap-2 px-3 py-3 text-sm text-muted transition-colors hover:text-accent"
+              >
+                <Download size={16} aria-hidden /> CV
+                <span className="sr-only">(PDF download)</span>
+              </a>
+            )}
             <span className="flex items-center">
             <span className="mx-1 hidden h-6 w-px bg-line sm:block" aria-hidden />
             <a

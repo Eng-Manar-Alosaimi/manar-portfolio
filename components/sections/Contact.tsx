@@ -1,4 +1,4 @@
-import { ArrowUpRight, Download, Github, Linkedin, Mail, MapPin } from "lucide-react";
+import { ArrowUpRight, Download, Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import { profile } from "@/data/profile";
 import { CopyEmail } from "@/components/CopyEmail";
@@ -6,6 +6,7 @@ import { CopyEmail } from "@/components/CopyEmail";
 export function Contact() {
   const links = [
     { icon: Mail, label: "Email", value: profile.email, href: `mailto:${profile.email}`, external: false },
+    { icon: Phone, label: "Phone", value: profile.phone.display, href: `tel:${profile.phone.tel}`, external: false },
     { icon: Linkedin, label: "LinkedIn", value: "manar-alosaimixx", href: profile.linkedin, external: true },
     { icon: Github, label: "GitHub", value: "Eng-Manar-Alosaimi", href: profile.github, external: true },
   ];
@@ -45,9 +46,9 @@ export function Contact() {
         </Reveal>
 
         <Reveal delay={0.2}>
-          <ul className="mt-16 grid border-t border-line sm:grid-cols-2 lg:grid-cols-4">
+          <ul className="mt-16 grid gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             {links.map((l) => (
-              <li key={l.label} className="border-b border-line lg:border-b-0 lg:border-r">
+              <li key={l.label} className="bg-ink">
                 <a
                   href={l.href}
                   {...(l.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
@@ -64,7 +65,7 @@ export function Contact() {
                 </a>
               </li>
             ))}
-            <li className="flex flex-col gap-3 p-5">
+            <li className="flex flex-col gap-3 bg-ink p-5 sm:col-span-2 xl:col-span-1">
               <span className="inline-flex items-center gap-2 font-mono text-[0.65rem] uppercase tracking-[0.12em] text-faint">
                 <MapPin size={13} aria-hidden /> Location
               </span>

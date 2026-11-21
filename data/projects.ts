@@ -347,7 +347,7 @@ export const projects: Project[] = [
     title: "Logistics Multi-Agent AI System",
     category: "ai",
     kind: "Team course project",
-    year: "Prototype", // TODO(Manar): add the course year once confirmed
+    year: "2026",
     context: "SDAIA Academy course · Team of four",
     role: "Agent architecture design (team of four)",
     tagline: "A LangGraph coordinator that screens, routes and sanitises logistics requests across specialised agents.",

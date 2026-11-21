@@ -17,6 +17,7 @@ export default function Home() {
     description: siteMeta.description,
     url: siteUrl,
     email: `mailto:${profile.email}`,
+    telephone: profile.phone.tel,
     address: { "@type": "PostalAddress", addressLocality: "Riyadh", addressCountry: "SA" },
     sameAs: [profile.linkedin, profile.github],
     knowsAbout: ["Artificial Intelligence", "Data Engineering", "Intelligent Systems", "Edge AI", "Large Language Models"],
